@@ -62,6 +62,7 @@ button {
   position: relative;
   display: inline-block;
 }
+
 /*HEADER - NAV*/
 
 .navbar {
@@ -69,18 +70,25 @@ button {
   padding: 16px 32px;
   color: var(--clr-font);
   font-size: var(--font-normal);
-  overflow: visible;
+  display: flex;
   line-height: 1.5;
   width: 100%;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
 }
+
+.fa-bars {
+  display: none;
+}
+
 .navbar-left,
 .navbar-right {
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+
+.navbar-left {
+  margin-left: 0px;
+  padding-left: 0px;
 }
 
 .navbar a,
@@ -537,7 +545,7 @@ button:hover {
   color: var(--clr-font-small);
 }
 
-@media (max-width: 756px) {
+@media only screen and (max-width: 756px) {
   /*HEADER*/
 
   .grid {
@@ -552,10 +560,8 @@ button:hover {
     line-height: 1.5;
     display: flex;
     margin-right: 16px;
-    align-self: stretch;
-    align-items: center;
     flex-wrap: wrap;
-    position: relative;
+    justify-content: space-between;
   }
 
   .search-bar input[type="text"] {
@@ -581,12 +587,11 @@ button:hover {
     vertical-align: middle;
     margin: 0px;
     padding: 0px;
-    justify-content: center;
   }
 
-  .navbar-left .fa-bars {
+  .fa-bars {
     display: inline-block;
-    overflow: visible !important;
+    overflow: visible;
     vertical-align: text-bottom;
     fill: currentColor;
     margin-left: 0px;
@@ -704,6 +709,7 @@ button:hover {
     padding: 0px;
     color: var(--clr-header-a);
   }
+
   .border-content {
     background-color: var(--clr-header);
   }
