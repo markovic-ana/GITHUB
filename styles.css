@@ -739,3 +739,9 @@ button:hover {
     display: none;
   }
 }
+
+@media only screen and (min-width: 757px) and (max-width: 1112px) {
+  .sidebar-right {
+    display: none;
+  }
+}
