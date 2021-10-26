@@ -76,7 +76,7 @@ button {
   justify-content: space-between;
 }
 
-.fa-bars {
+.navbar-left-burger {
   display: none;
 }
 
@@ -589,7 +589,7 @@ button:hover {
     padding: 0px;
   }
 
-  .fa-bars {
+  .navbar-left-burger {
     display: inline-block;
     overflow: visible;
     vertical-align: text-bottom;
