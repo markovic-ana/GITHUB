@@ -189,6 +189,7 @@ button {
   border-right: 1px solid var(--clr-border);
   border-bottom: 1px solid var(--clr-border);
   overflow: auto;
+  min-width: 270px;
 }
 
 .sidebar-top h2 {
@@ -206,6 +207,7 @@ button {
   margin-inline-end: 0px;
   line-height: 1.5;
   margin-bottom: 4px;
+  margin-top: 32px;
 }
 
 .sidebar button {
@@ -237,34 +239,30 @@ button:hover {
   color: #474f58;
 }
 
-.sidebar-left-content-top img {
+.myRepLeftSide img {
   display: inline-block;
   overflow: hidden;
   line-height: 1;
-  vertical-align: middle;
   width: 16px;
-  aspect-ratio: auto 16 / 16;
   height: 16px;
+  margin-right: 8px;
+  align-items: center;
+  vertical-align: -webkit-baseline-middle;
 }
 
-.sidebar-left-content-top ul {
+.myRepLeftSide ul {
   margin-top: 8px;
 }
 
-.sidebar-left-content-top li {
-  text-align: -webkit-match-parent;
+.myRepLeftSide li {
+  align-items: center;
   margin-bottom: 8px;
   display: flex;
   width: 100%;
 }
 
-.sidebar-left-content-top a {
+.myRepLeftSide ul li a {
   color: var(--clr-font);
-}
-
-.sidebar-left-content-top img {
-  margin-right: 8px;
-  align-items: center;
 }
 
 .sidebar-left-content-bottom {
@@ -321,61 +319,68 @@ button:hover {
 .middle-content img {
   width: 32px;
   height: 32px;
+  margin-right: 8px;
+  vertical-align: -webkit-baseline-middle;
 }
 
-.content-box {
+.userRepBox {
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--clr-border);
+  width: 100%;
 }
 
-.content-box li {
+.userRepBox ul {
   display: flex;
 }
 
-.content-box a {
+.flex-baseline {
+  width: 100% !important;
+}
+
+.userRepBox a {
   color: var(--clr-font);
   font-size: var(--font-normal);
 }
 
-.content-box a:hover {
+.userRepBox a:hover {
   color: var(--clr-link);
 }
 
-.content-box p {
+.userRepBox p {
   color: var(--clr-font);
   font-size: var(--font-normal);
 }
 
-.content-box .date {
+.userRepBox .date {
   color: var(--clr-font-small);
   font-size: var(--font-small);
 }
 
-.border-content {
+.userRepBoxSmall {
   border: 1px solid var(--clr-border);
   border-radius: 6px;
   padding: 16px 16px;
-  margin-top: 8px;
   background-color: var(--clr-left-sidebar);
   width: 100%;
+  margin-top: 8px;
 }
 
-.border-content a {
+.userRepBoxSmall a {
   font-size: var(--font-big);
   display: inline-block;
   font-weight: 600;
 }
 
-.border-content-top {
+.userRepBoxSmall-top {
   display: flex;
   line-height: 1.25;
   align-items: baseline;
   justify-content: space-between;
 }
 
-.content-btn {
+.repBoxbtn {
   margin-left: 8px;
   padding: 3px 12px;
   font-size: 12px;
@@ -385,8 +390,7 @@ button:hover {
   border: 1px solid var(--clr-border);
   border-radius: 6px;
 }
-
-.content-btn:hover {
+.repBoxbtn:hover {
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.4);
 }
@@ -431,7 +435,7 @@ button:hover {
   width: 100%;
   display: flex;
   margin: 32px 0;
-  align-items: stretch;
+  flex-wrap: wrap;
 }
 
 .footer-info {
@@ -545,7 +549,7 @@ button:hover {
   color: var(--clr-font-small);
 }
 
-@media only screen and (max-width: 756px) {
+@media only screen and (max-width: 480px) {
   /*HEADER*/
 
   .grid {
@@ -723,8 +727,19 @@ button:hover {
     color: var(--clr-header-a);
   }
   /*FOOTER*/
+  .middle-footer-nav {
+    flex: auto !important;
+  }
 
   .footer-info {
+    display: none;
+  }
+
+  .footer-info i {
+    display: none;
+  }
+
+  .footer-info p {
     display: none;
   }
 
@@ -732,6 +747,7 @@ button:hover {
     padding: 0px;
     margin-bottom: 0px;
     width: 100%;
+    flex: auto !important;
   }
 
   /*SIDEBAR RIGHT*/
@@ -740,8 +756,31 @@ button:hover {
   }
 }
 
-@media only screen and (min-width: 757px) and (max-width: 1112px) {
+@media only screen and (min-width: 481px) and (max-width: 769px) {
+  .grid {
+    grid-template-columns: 0.5fr 1fr;
+  }
+
   .sidebar-right {
     display: none;
+  }
+  .middle-footer-nav {
+    flex: auto !important;
+  }
+  .footer-info {
+    display: none;
+  }
+
+  .footer-info i {
+    display: none;
+  }
+
+  .footer-info p {
+    display: none;
+  }
+
+  .footer-links ul {
+    padding: 0px;
+    margin-bottom: 0px;
   }
 }
