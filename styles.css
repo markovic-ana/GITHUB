@@ -74,6 +74,7 @@ button {
   line-height: 1.5;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-left-burger {
@@ -156,7 +157,6 @@ button {
   display: inline-block;
   width: 0;
   height: 0;
-  vertical-align: middle;
   content: "";
   border-style: solid;
   border-width: 4px 4px 0;
@@ -169,9 +169,21 @@ button {
   display: none;
 }
 
+.fa-caret-down {
+  align-items: flex-start;
+}
+
 .navbar-right img {
   width: 20px;
   height: 20px;
+}
+
+.navbar-right-nav ul {
+  align-items: center;
+}
+
+.navbar-right-nav a {
+  align-items: center;
 }
 
 /*SIDEBAR LEFT*/
@@ -561,11 +573,10 @@ button:hover {
     display: flex;
     padding: 16px;
     font-size: 14px;
-    line-height: 1.5;
     display: flex;
     margin-right: 16px;
-    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
   }
 
   .search-bar input[type="text"] {
@@ -588,7 +599,6 @@ button:hover {
   }
 
   .navbar-left img {
-    vertical-align: middle;
     margin: 0px;
     padding: 0px;
   }
@@ -596,7 +606,6 @@ button:hover {
   .navbar-left-burger {
     display: inline-block;
     overflow: visible;
-    vertical-align: text-bottom;
     fill: currentColor;
     margin-left: 0px;
   }
